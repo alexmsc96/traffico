@@ -137,7 +137,7 @@ function Faqs() {
           style={{
             transform: question.show ? "translateY(0)" : "translateY(-5vh)",
             opacity: question.show ? "1" : "0",
-            height: question.show ? "100%" : "0",
+            height: question.show ? "100%" : "0vh",
             padding: question.show ? "3rem 3rem 4rem 2rem" : "0",
           }}
           className={classes.QuestionSecondary}
