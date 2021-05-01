@@ -29,7 +29,7 @@ function About() {
         <div className={classes.SectionImageContainer}>
           <img
             data-aos="fade-left"
-            data-aos-anchor-placement="center-bottom"
+            data-aos-anchor-placement="bottom-bottom"
             data-aos-delay="500"
             data-aos-duration="1000"
             data-aos-once="true"
