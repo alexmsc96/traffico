@@ -64,7 +64,7 @@
     @include Flex(center, flex-start, row);
     overflow: hidden;
     flex-wrap: wrap;
-    margin-right: 1rem;
+    margin-top: 2rem;
     transition: $basic-transition;
 
     @media (max-width: 425px) {
