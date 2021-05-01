@@ -280,6 +280,7 @@ function Faqs() {
         <section
           style={{
             display: show ? "flex" : "none",
+            marginTop: "0",
           }}
           className={classes.QuestionSection}
         >
