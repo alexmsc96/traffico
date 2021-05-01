@@ -41,16 +41,18 @@ function Footer() {
             <Logo />
             <ul className={classes.FooterUl}>
               <li>
-                <Link smooth to="/#about">
+                <Link className={classes.FooterLink} smooth to="/#about">
                   ABOUT
                 </Link>
               </li>
               <li>
-                <Link to="/#how-to"> HOW TO</Link>
+                <Link className={classes.FooterLink} to="/#how-to">
+                  HOW TO
+                </Link>
               </li>
               <li>
-                <Link to="/#contact-us" className={classes.Btn}>
-                  CONTACT US
+                <Link className={classes.FooterLink} to="/#faqs">
+                  FAQS
                 </Link>
               </li>
             </ul>

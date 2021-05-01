@@ -279,9 +279,6 @@ function Faqs() {
         </section>
         <section
           style={{
-            // height: show ? "min-content" : "0",
-            // transform: show ? "translateY(0)" : "translateY(-5vh)",
-            // opacity: show ? "1" : "0",
             display: show ? "flex" : "none",
           }}
           className={classes.QuestionSection}

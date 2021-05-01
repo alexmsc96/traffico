@@ -6,6 +6,7 @@
   .Section {
     @include Flex(space-between, center, row);
     overflow: hidden;
+    margin-top: 2rem;
 
     @media (max-width: 768px) {
       justify-content: center;
