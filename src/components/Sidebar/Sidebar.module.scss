@@ -1,0 +1,54 @@
+@import "../../utilities/utility-classes.scss";
+.Sidebar {
+  display: none;
+
+  @media (max-width: 1024px) {
+    @include Flex(space-between, center, row);
+    z-index: 4;
+    position: absolute;
+    width: 100%;
+
+    ul {
+      z-index: 4;
+      position: fixed;
+      right: 0;
+      top: 0;
+      transition: $basic-transition;
+      width: 100%;
+      height: 40%;
+      border: 1px solid red;
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      background-color: $accent-color;
+
+      .CloseBurger {
+        position: absolute;
+        z-index: 2;
+        top: 5%;
+        right: 2%;
+        font-size: 4rem;
+        color: $white;
+        cursor: pointer;
+      }
+
+      .Btn {
+        @include Btn;
+        flex: 1;
+
+        @media (max-width: 1024px) {
+          background-color: $bg-color;
+          color: $accent-color;
+        }
+      }
+    }
+  }
+
+  .Burger {
+    font-size: 4rem;
+    cursor: pointer;
+    color: $white;
+  }
+}

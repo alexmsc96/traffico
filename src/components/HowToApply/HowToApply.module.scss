@@ -1,0 +1,42 @@
+@import "../../utilities/utility-classes.scss";
+
+.InnerContainer {
+  @include InnerContainer;
+
+  .Section {
+    @include Flex(space-between, center, row);
+    overflow: hidden;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+
+    .SectionContent {
+      margin: 1rem;
+    }
+
+    .SectionImageContainer {
+      width: 70%;
+      @media (max-width: 768px) {
+        display: none;
+      }
+
+      .SectionImage {
+        width: 100%;
+        @include Img;
+      }
+    }
+
+    h2 {
+      @include h2;
+    }
+
+    .Text {
+      font-weight: $fw-light;
+      font-size: 1.8rem;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+      max-width: 36ch;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import "../../components/../utilities/utility-classes.scss";
+
+.InnerContainer {
+  @include InnerContainer;
+
+  .Section {
+    @include Flex(space-between, center, row);
+
+    @media (max-width: 1024px) {
+      justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+
+    @media (max-width: 1024px) {
+      padding-left: 1rem;
+    }
+
+    .SectionContent {
+      margin-right: 1rem;
+      h2 {
+        @include h2;
+      }
+
+      .Text {
+        font-weight: $fw-light;
+        font-size: 1.8rem;
+        line-height: 1.6;
+        margin-bottom: 3rem;
+        max-width: 36ch;
+      }
+
+      .TextHighlight {
+        font-weight: $fw-medium;
+        font-size: 2.4rem;
+        background-color: $secondary-color;
+        border-left: 10px solid $accent-color;
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        padding: 2rem;
+        max-width: 30ch;
+      }
+    }
+
+    .SectionImageContainer {
+      .SectionImage {
+        @include Img;
+      }
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+}

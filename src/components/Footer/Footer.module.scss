@@ -1,0 +1,125 @@
+@import "../../utilities/utility-classes.scss";
+
+.InnerContainer {
+  @include InnerContainer;
+}
+
+footer {
+  margin-top: 20rem;
+  position: relative;
+  background-color: $footer-color;
+  border-top-right-radius: 10rem;
+  width: 95%;
+  position: relative;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  &::before {
+    content: url("../../assets/images/Vector\ 13.png");
+    position: absolute;
+  }
+
+  .Copyright {
+    background-color: $bg-color;
+    padding: 2rem 1rem;
+    .InnerContainer {
+      @include Flex(space-between, center, row);
+      p {
+        font-size: 1.6rem;
+        font-weight: $fw-light;
+      }
+
+      .Social {
+        a:not(:last-of-type) {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+
+  .ImgContainer {
+    transform: translateY(-80%);
+    position: relative;
+    width: min-content;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 20rem;
+      width: 20rem;
+      border-radius: 50%;
+      background-color: $footer-color;
+      top: 40%;
+      right: -25%;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 10rem;
+      width: 20rem;
+      border-top-left-radius: 20rem;
+      border-top-right-radius: 20rem;
+      background-color: #fcddd4;
+      top: 52%;
+      left: -10%;
+    }
+  }
+}
+
+.FooterContainer {
+  position: relative;
+  margin: 0 1rem;
+  .FormContainer {
+    @include Flex(center, center, row);
+    transform: translateY(-80%);
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      transform: translateY(0%);
+    }
+
+    .FooterText {
+      color: $white;
+      font-weight: $fw-regular;
+      font-size: 2rem;
+      max-width: 25ch;
+      line-height: 1.5;
+      padding: 1.5rem 0 1.5rem 1.5rem;
+      border-left: 5px solid $accent-color;
+      border-radius: 0.5rem;
+      margin-right: 20rem;
+      align-self: flex-end;
+
+      @media (max-width: 1024px) {
+        margin-right: 5rem;
+      }
+
+      @media (max-width: 768px) {
+        align-self: center;
+        margin-right: 0;
+        max-width: 40ch;
+        margin-bottom: 5rem;
+      }
+    }
+  }
+
+  .FooterNav {
+    @include Flex(space-between, center, row);
+    margin-bottom: 5rem;
+
+    @media (max-width: 425px) {
+      flex-direction: column;
+      .FooterUl {
+        width: 100%;
+      }
+    }
+    .FooterLink {
+      font-weight: $fw-regular;
+    }
+  }
+}

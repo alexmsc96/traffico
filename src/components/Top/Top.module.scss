@@ -1,0 +1,72 @@
+@import "../../utilities/utility-classes.scss";
+
+.InnerContainer {
+  @include InnerContainer;
+}
+
+.Scene {
+  background-image: url("../../assets/images/Scene.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: 1rem;
+  position: relative;
+
+  @media (min-width: 1800px) {
+    max-width: 70vw;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+
+  .Truck {
+    @include Img;
+  }
+
+  .Section {
+    height: 80vh;
+    max-height: 80rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    @media (max-width: 1024px) {
+      padding-left: 1rem;
+    }
+
+    @media (min-width: 1800px) {
+      padding-left: 1rem;
+    }
+
+    h1 {
+      font-family: $secondary-font;
+      font-weight: $fw-regular;
+      color: $white;
+      font-size: 10rem;
+      line-height: 1;
+      margin-top: 10rem;
+      margin-bottom: 8rem;
+      @media (max-width: 768px) {
+        font-size: 15vw;
+      }
+    }
+
+    .Btn {
+      @include Btn;
+      font-weight: $fw-bold;
+      padding: 1.5rem 6rem 1.5rem 2rem;
+      position: relative;
+
+      .Icon {
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 3rem;
+      }
+    }
+  }
+}
